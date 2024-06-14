@@ -2,32 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@font-face {
+    font-family: 'Vazir';
+    src: url('./assets/vazir-font-v16.1.0/vazir-font-v16.1.0/Vazir-Light.woff2') format('woff2'),
+         url('./assets/vazir-font-v16.1.0/vazir-font-v16.1.0/Vazir-Light.woff') format('woff'),
+         url('./assets/vazir-font-v16.1.0/vazir-font-v16.1.0/Vazir-Light.ttf') format('truetype');
+    /* Optionally, you can specify font weight and style */
+    font-weight: normal;
+    font-style: normal;
   }
+  
+
+  
+
+@font-face {
+     font-family: 'Nas';
+     src: url('./assets/Nastaliq-font-collection-[www.pixelboy.ir]/Fonts/Dima\ Shekasteh.ttf') format('truetype');
+     font-weight: normal;
+     font-style: normal;
+   }
+   
+
+   @font-face {
+     font-family: 'Nas2';
+     src: url('./assets/Nastaliq-font-collection-[www.pixelboy.ir]/Fonts/IranNastaliq_1.ttf') format('truetype');
+     font-weight: normal;
+     font-style: normal;
+   }
+
+
+.nav li{
+     position: relative;
+	overflow: hidden;
+     transition: all 1s ease-in;
+     -webkit-transition: all 1s ease-in;
+     -moz-transition: all 1s ease-in;
+     -ms-transition: all 1s ease-in;
+     -o-transition: all 1s ease-in;
+}
+  .nav li::before{
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     background-color: brown;
+     height: 100%;
+     transform-origin: bottom left;
+     transform: rotate(-90deg);
+     transition: transform 1s;
+     opacity: 1;
+     border-radius: 50px;
+     -webkit-border-radius: 50px;
+     -moz-border-radius: 50px;
+     -ms-border-radius: 50px;
+     -o-border-radius: 50px;
+     -webkit-transform: rotate(-90deg);
+     -moz-transform: rotate(-90deg);
+     -ms-transform: rotate(-90deg);
+     -o-transform: rotate(-90deg);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.nav li:hover::before{
+     transform: rotate(10deg);
+     -webkit-transform: rotate(10deg);
+     -moz-transform: rotate(10deg);
+     -ms-transform: rotate(10deg);
+     -o-transform: rotate(10deg);
 }
