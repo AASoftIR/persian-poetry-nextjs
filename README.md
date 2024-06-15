@@ -3,7 +3,7 @@
 Welcome to the Persian Poetry App! 🌟 This app allows you to search and find random awesome Persian poems. It's built with Next.js and styled with Tailwind CSS. Enjoy the beauty of Persian literature with a modern touch!
 
 ## 🖥️ Technology Used
-## LIVE AT: [Vercel]([https://vercel.com](https://persian-poetry-nextjs-aasoft.vercel.app/))
+## LIVE AT: [Vercel](https://persian-poetry-nextjs-aasoft.vercel.app/)
 This project leverages the following technologies:
 
 ### - **Next.js**
